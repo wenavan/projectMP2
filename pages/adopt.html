@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script
+      src="https://kit.fontawesome.com/dc2922df3c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js"></script>
+
+    <!-- Font style of About Us-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@800&family=Phudu:wght@300;600&family=Poppins:wght@100&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@800&family=Phudu:wght@300;600&family=Poppins:wght@100&family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <!----===== Iconscout CSS ===== -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+
+    <link rel="stylesheet" href="../css/adopt.css" />
+    <script src="../js/index.js" defer></script>
+
+    <title>Adopt</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="../icon/favicon-96x96.png"
+    />
+  </head>
+
+  <body id="adopt">
+    <!-- Dog running -->
+
+    <!-- Header and the navbar -->
+    <nav class="header sticky-top" data-visible="false">
+      <header class="container primary-header flex">
+        <div>
+          <a href="../index.html"
+            ><img src="../img/haven-logo.png" class="logo"
+          /></a>
+        </div>
+
+        <button
+          class="mobile-nav-toggle"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Menu</span>
+        </button>
+
+        <ul
+          id="primary-navigation"
+          data-visible="false"
+          class="primary-navigation flex"
+        >
+          <li>
+            <form id="app" action="#" visible="false">
+              <label class="label" :data-state="state" for="search">
+                <input
+                  type="text"
+                  required
+                  placeholder="Type to search.."
+                  @click="state = 'opan'"
+                  @blur="state='close'"
+                />
+                <i class="fa fa-search" @click="" aria-hidden="true"></i>
+              </label>
+            </form>
+          </li>
+          <li>
+            <a data-active="home" href="../index.html">Home </a>
+          </li>
+          <li>
+            <a data-active="about" href="../pages/about.html">About</a>
+          </li>
+          <li>
+            <a data-active="adopt" href="../pages/adopt.html">Adopt</a>
+          </li>
+
+          <li>
+            <a data-active="donate" href="../pages/donate.html">Donate</a>
+          </li>
+          <li>
+            <a data-active="contact" href="../pages/contact.html">Contact</a>
+          </li>
+
+          <li>
+            <button
+              class="volunter-button"
+              type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#show-modal"
+            >
+              Volunteer
+            </button>
+          </li>
+        </ul>
+      </header>
+    </nav>
+
+    <!-- End of the navbar-->
+
+    <!-- Contents banner -->
+
+    <div class="about_us">
+      <img src="../img/adopt.jpg" class="banner" alt="Dog and cat" />
+      <div class="bottom-left"><h1>Adopt Now</h1></div>
+    </div>
+
+    <!-- Wave top-->
+
+    <section class="wave-top">
+      <div class="wave"></div>
+    </section>
+
+    <!-- Adoption images -->
+
+    <div class="card-section" class="hidden">
+      <div class="container card-option">
+        <div class="box">
+          <div class="image">
+            <img src="../Dog/Dog1.jpg" alt="" />
+          </div>
+          <div class="name_job">David</div>
+
+          <p>
+            Lorem ipsum dolor sitamet, stphen hawkin so adipisicing elit.
+            Ratione disuja doloremque reiciendi nemo.
+          </p>
+          <div class="btns">
+            <button>Read More</button>
+            <button><a href="#adoption"> Adopt</a></button>
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img src="../Dog/Dog2.jpg" alt="" />
+          </div>
+          <div class="name_job">Kristina</div>
+
+          <p>
+            Lorem ipsum dolor sitamet, stphen hawkin so adipisicing elit.
+            Ratione disuja doloremque reiciendi nemo.
+          </p>
+          <div class="btns">
+            <button>Read More</button>
+            <button><a href="#adoption"> Adopt</a></button>
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img src="../Dog/Dog3.jpg" alt="" />
+          </div>
+          <div class="name_job">Stephen</div>
+
+          <p>
+            Lorem ipsum dolor sitamet, stphen hawkin so adipisicing elit.
+            Ratione disuja doloremque reiciendi nemo.
+          </p>
+          <div class="btns">
+            <button>Read More</button>
+            <button><a href="#adoption"> Adopt</a></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-section" class="hidden">
+      <div class="container card-option">
+        <div class="box">
+          <div class="image">
+            <img src="../Dog/Dog4.jpg" alt="" />
+          </div>
+          <div class="name_job">Chrish</div>
+
+          <p>
+            Lorem ipsum dolor sitamet, stphen hawkin so adipisicing elit.
+            Ratione disuja doloremque reiciendi nemo.
+          </p>
+          <div class="btns">
+            <button>Read More</button>
+            <button><a href="#adoption"> Adopt</a></button>
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img src="../Dog/Dog5.jpg" alt="" />
+          </div>
+          <div class="name_job">Bellis</div>
+
+          <p>
+            Lorem ipsum dolor sitamet, stphen hawkin so adipisicing elit.
+            Ratione disuja doloremque reiciendi nemo.
+          </p>
+          <div class="btns">
+            <button>Read More</button>
+            <button><a href="#adoption"> Adopt</a></button>
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img src="../Dog/Dog6.jpg" alt="" />
+          </div>
+          <div class="name_job">Marlo</div>
+
+          <p>
+            Lorem ipsum dolor sitamet, stphen hawkin so adipisicing elit.
+            Ratione disuja doloremque reiciendi nemo.
+          </p>
+          <div class="btns">
+            <button>Read More</button>
+            <button><a href="#adoption"> Adopt</a></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-section" class="hidden">
+      <div class="container card-option">
+        <div class="box">
+          <div class="image">
+            <img src="../Cats/Cat1.jpg" alt="" />
+          </div>
+          <div class="name_job">Thea</div>
+
+          <p>
+            Lorem ipsum dolor sitamet, stphen hawkin so adipisicing elit.
+            Ratione disuja doloremque reiciendi nemo.
+          </p>
+          <div class="btns">
+            <button>Read More</button>
+            <button><a href="#adoption"> Adopt</a></button>
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img src="../Cats/Cat2.jpg" alt="" />
+          </div>
+          <div class="name_job">Climber</div>
+
+          <p>
+            Lorem ipsum dolor sitamet, stphen hawkin so adipisicing elit.
+            Ratione disuja doloremque reiciendi nemo.
+          </p>
+          <div class="btns">
+            <button>Read More</button>
+            <button><a href="#adoption"> Adopt</a></button>
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img src="../Cats/Cat3.jpg" alt="" />
+          </div>
+          <div class="name_job">Jl</div>
+
+          <p>
+            Lorem ipsum dolor sitamet, stphen hawkin so adipisicing elit.
+            Ratione disuja doloremque reiciendi nemo.
+          </p>
+          <div class="btns">
+            <button>Read More</button>
+            <button><a href="#adoption"> Adopt</a></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-section" class="hidden">
+      <div class="container card-option">
+        <div class="box">
+          <div class="image">
+            <img src="../Cats/Cat4.jpg" alt="" />
+          </div>
+          <div class="name_job">Arya</div>
+
+          <p>
+            Lorem ipsum dolor sitamet, stphen hawkin so adipisicing elit.
+            Ratione disuja doloremque reiciendi nemo.
+          </p>
+          <div class="btns">
+            <button>Read More</button>
+            <button><a href="#adoption"> Adopt</a></button>
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img src="../Cats/Cat5.jpg" alt="" />
+          </div>
+          <div class="name_job">Santino</div>
+
+          <p>
+            Lorem ipsum dolor sitamet, stphen hawkin so adipisicing elit.
+            Ratione disuja doloremque reiciendi nemo.
+          </p>
+          <div class="btns">
+            <button>Read More</button>
+            <button><a href="#adoption"> Adopt</a></button>
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img src="../Cats/Cat6.jpg" alt="" />
+          </div>
+          <div class="name_job">Agua</div>
+
+          <p>
+            Lorem ipsum dolor sitamet, stphen hawkin so adipisicing elit.
+            Ratione disuja doloremque reiciendi nemo.
+          </p>
+          <div class="btns">
+            <button>Read More</button>
+            <button><a href="#adoption"> Adopt</a></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Adoption header -->
+
+    <div class="adoption-header" id="adoption" class="hidden">
+      <h1><span>Adoption Form</span></h1>
+    </div>
+
+    <!-- Adoption form -->
+
+    <div class="container-form pt-5" class="hidden">
+      <div class="adoption-form">
+        <header>Adoption Form</header>
+
+        <form action="#">
+          <div class="form first">
+            <div class="details personal">
+              <span class="title">Personal Details</span>
+
+              <div class="fields">
+                <div class="input-field">
+                  <label>Full Name</label>
+                  <input type="text" placeholder="Enter your name" required />
+                </div>
+
+                <div class="input-field">
+                  <label>Date of Birth</label>
+                  <input type="date" placeholder="Enter birth date" required />
+                </div>
+
+                <div class="input-field">
+                  <label>Email</label>
+                  <input type="text" placeholder="Enter your email" required />
+                </div>
+
+                <div class="input-field">
+                  <label>Mobile Number</label>
+                  <input
+                    type="number"
+                    placeholder="Enter mobile number"
+                    required
+                  />
+                </div>
+
+                <div class="input-field">
+                  <label>Gender</label>
+                  <select required>
+                    <option disabled selected>Select gender</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Others</option>
+                  </select>
+                </div>
+
+                <div class="input-field">
+                  <label>Occupation</label>
+                  <input
+                    type="text"
+                    placeholder="Enter your ccupation"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="details ID">
+              <span class="title">Identity Details</span>
+
+              <div class="fields">
+                <div class="input-field">
+                  <label>ID Type</label>
+                  <input type="text" placeholder="Enter ID type" required />
+                </div>
+
+                <div class="input-field">
+                  <label>ID Number</label>
+                  <input type="number" placeholder="Enter ID number" required />
+                </div>
+
+                <div class="input-field">
+                  <label>Issued Authority</label>
+                  <input
+                    type="text"
+                    placeholder="Enter issued authority"
+                    required
+                  />
+                </div>
+
+                <div class="input-field">
+                  <label>Issued State</label>
+                  <input
+                    type="text"
+                    placeholder="Enter issued state"
+                    required
+                  />
+                </div>
+
+                <div class="input-field">
+                  <label>Issued Date</label>
+                  <input
+                    type="date"
+                    placeholder="Enter your issued date"
+                    required
+                  />
+                </div>
+
+                <div class="input-field">
+                  <label>Expiry Date</label>
+                  <input type="date" placeholder="Enter expiry date" required />
+                </div>
+              </div>
+
+              <button class="nextBtn">
+                <span class="btnText">Next</span>
+                <i class="uil uil-navigator"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="form second">
+            <div class="details address">
+              <span class="title">Address Details</span>
+
+              <div class="fields">
+                <div class="input-field">
+                  <label>Address Type</label>
+                  <input
+                    type="text"
+                    placeholder="Permanent or Temporary"
+                    required
+                  />
+                </div>
+
+                <div class="input-field">
+                  <label>Nationality</label>
+                  <input type="text" placeholder="Enter nationality" required />
+                </div>
+
+                <div class="input-field">
+                  <label>State</label>
+                  <input type="text" placeholder="Enter your state" required />
+                </div>
+
+                <div class="input-field">
+                  <label>District</label>
+                  <input
+                    type="text"
+                    placeholder="Enter your district"
+                    required
+                  />
+                </div>
+
+                <div class="input-field">
+                  <label>Block Number</label>
+                  <input
+                    type="number"
+                    placeholder="Enter block number"
+                    required
+                  />
+                </div>
+
+                <div class="input-field">
+                  <label>Ward Number</label>
+                  <input
+                    type="number"
+                    placeholder="Enter ward number"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="details family">
+              <span class="title">Family Details</span>
+
+              <div class="fields">
+                <div class="input-field">
+                  <label>Father Name</label>
+                  <input type="text" placeholder="Enter father name" required />
+                </div>
+
+                <div class="input-field">
+                  <label>Mother Name</label>
+                  <input type="text" placeholder="Enter mother name" required />
+                </div>
+
+                <div class="input-field">
+                  <label>Grandfather</label>
+                  <input
+                    type="text"
+                    placeholder="Enter grandfther name"
+                    required
+                  />
+                </div>
+
+                <div class="input-field">
+                  <label>Spouse Name</label>
+                  <input type="text" placeholder="Enter spouse name" required />
+                </div>
+
+                <div class="input-field">
+                  <label>Father in Law</label>
+                  <input
+                    type="text"
+                    placeholder="Father in law name"
+                    required
+                  />
+                </div>
+
+                <div class="input-field">
+                  <label>Mother in Law</label>
+                  <input
+                    type="text"
+                    placeholder="Mother in law name"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="buttons">
+                <div class="backBtn">
+                  <i class="uil uil-navigator"></i>
+                  <span class="btnText">Back</span>
+                </div>
+
+                <button class="sumbit">
+                  <span class="btnText">Submit</span>
+                  <i class="uil uil-navigator"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- wave footer -->
+
+    <section class="wave-header">
+      <div class="wave wave1"></div>
+      <div class="wave wave2"></div>
+      <div class="wave wave3"></div>
+      <div class="wave wave4"></div>
+    </section>
+
+    <!-- Footer of the page -->
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>About Safe haven</h4>
+            <ul>
+              <li><a href="#">Profile</a></li>
+              <li><a href="#">Donate</a></li>
+              <li><a href="#">Advocacies</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Explore safe haven</h4>
+            <ul>
+              <li><a href="#">For Homes & shelter</a></li>
+              <li><a href="#">For volunteers</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>News & Advisories</h4>
+            <ul>
+              <li><a href="#">Medical mission</a></li>
+              <li><a href="#">Latest News & Press Releases</a></li>
+              <li><a href="#">Safety Tips</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contact Us</h4>
+            <div class="social-links">
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-youtube"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom pt-4">
+        <p>
+          <em> © 2023 Safe Haven. All Rights Reserved.</em>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

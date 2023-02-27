@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script
+      src="https://kit.fontawesome.com/dc2922df3c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js"></script>
+
+    <!-- Font style of About Us-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@800&family=Phudu:wght@300;600&family=Poppins:wght@100&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@800&family=Phudu:wght@300;600&family=Poppins:wght@100&family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/about.css" />
+    <script src="../js/index.js" defer></script>
+
+    <title>About</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="../icon/favicon-96x96.png"
+    />
+  </head>
+
+  <body id="about">
+    <!-- Dog running -->
+
+    <!-- Header and the navbar -->
+    <nav class="header sticky-top" data-visible="false">
+      <header class="container primary-header flex">
+        <div>
+          <a href="../index.html"
+            ><img src="../img/haven-logo.png" class="logo"
+          /></a>
+        </div>
+
+        <button
+          class="mobile-nav-toggle"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Menu</span>
+        </button>
+
+        <ul
+          id="primary-navigation"
+          data-visible="false"
+          class="primary-navigation flex"
+        >
+          <li>
+            <form id="app" action="#" visible="false">
+              <label :data-state="state" for="search">
+                <input
+                  type="text"
+                  required
+                  placeholder="Type to search.."
+                  @click="state = 'opan'"
+                  @blur="state='close'"
+                />
+                <i class="fa fa-search" @click="" aria-hidden="true"></i>
+              </label>
+            </form>
+          </li>
+          <li>
+            <a data-active="home" href="../index.html">Home </a>
+          </li>
+          <li>
+            <a data-active="about" href="../pages/about.html">About</a>
+          </li>
+          <li>
+            <a data-active="adopt" href="../pages/adopt.html">Adopt</a>
+          </li>
+
+          <li>
+            <a data-active="donate" href="../pages/donate.html">Donate</a>
+          </li>
+          <li>
+            <a data-active="contact" href="../pages/contact.html">Contact</a>
+          </li>
+
+          <li>
+            <button
+              class="volunter-button"
+              type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#show-modal"
+            >
+              Volunteer
+            </button>
+          </li>
+        </ul>
+      </header>
+    </nav>
+
+    <!-- End of the navbar-->
+
+    <!-- Contents banner -->
+
+    <div class="about_us">
+      <img src="../img/banner.jpg" class="banner" alt="Dog and cat" />
+      <div class="bottom-left"><h1>About Us</h1></div>
+    </div>
+
+    <!-- Wave top-->
+
+    <section class="wave-top">
+      <div class="wave"></div>
+    </section>
+
+    <!--About us contents -->
+    <section>
+      <div class="about">
+        <div class="wrapper">
+          <div class="content">
+            <p>
+              Safe haven is a registered non-profit organization which is
+              dedicated to the protection and the promotion of humane treatment
+              of all animals. Safe haven takes a firm stand on matters relating
+              to animal welfare, and continues to lobby for better laws to
+              ensure humane treatment of all animals.
+            </p>
+            <div class="button">
+              <a href="">Read more</a>
+            </div>
+          </div>
+          <div class="image-section">
+            <img src="../img/Dog-Volunteers.jpg" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wave top-->
+    <section class="wave-head">
+      <div class="wave"></div>
+    </section>
+
+    <!-- wave footer -->
+
+    <section class="wave-header">
+      <div class="wave wave1"></div>
+      <div class="wave wave2"></div>
+      <div class="wave wave3"></div>
+      <div class="wave wave4"></div>
+    </section>
+
+    <!-- Footer of the page -->
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>About Safe haven</h4>
+            <ul>
+              <li><a href="#">Profile</a></li>
+              <li><a href="#">Donate</a></li>
+              <li><a href="#">Advocacies</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Explore safe haven</h4>
+            <ul>
+              <li><a href="#">For Homes & shelter</a></li>
+              <li><a href="#">For volunteers</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>News & Advisories</h4>
+            <ul>
+              <li><a href="#">Medical mission</a></li>
+              <li><a href="#">Latest News & Press Releases</a></li>
+              <li><a href="#">Safety Tips</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contact Us</h4>
+            <div class="social-links">
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-youtube"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom pt-4">
+        <p>
+          <em> © 2023 Safe Haven. All Rights Reserved.</em>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
